@@ -32,5 +32,23 @@ createApp({
                 }
             ]
         }
+    },
+    methods: {
+        prevSlide() {
+            // console.log("prev");
+            if (this.activeSlide === 0) {
+                this.activeSlide = this.slides.length - 1;
+            } else {
+                this.activeSlide--;
+            }
+        },
+        nextSlide() {
+            // console.log("next");
+            if (this.activeSlide === this.slides.length - 1) {
+                this.activeSlide = 0;
+            } else {
+                this.activeSlide++;
+            }
+        }
     }
 }).mount('#app');
