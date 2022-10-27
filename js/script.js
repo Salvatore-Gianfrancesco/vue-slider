@@ -49,6 +49,10 @@ createApp({
             } else {
                 this.activeSlide++;
             }
+        },
+        changeSlide(index) {
+            // console.log(index);
+            this.activeSlide = index;
         }
     }
 }).mount('#app');
