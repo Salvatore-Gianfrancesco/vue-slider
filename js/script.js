@@ -53,6 +53,16 @@ createApp({
         changeSlide(index) {
             // console.log(index);
             this.activeSlide = index;
+        },
+        startAutoplay() {
+            this.interval = setInterval(this.nextSlide, 3000)
+
+        },
+        stopAutoplay() {
+            clearInterval(this.interval)
         }
+    },
+    mounted() {
+        this.startAutoplay()
     }
 }).mount('#app');
